@@ -1,7 +1,7 @@
 import axios from "axios";
 import { TProduct } from "./types";
 
-const HOST = 'https://tvijznahar-production.up.railway.app';
+const HOST = process.env.REACT_APP_HOST;
 
 export class ProductService {
     static async create(formData: FormData) {

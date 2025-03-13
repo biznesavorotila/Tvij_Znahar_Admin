@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const HOST = 'https://tvijznahar-production.up.railway.app';
+const HOST = process.env.REACT_APP_HOST;
 
 export class PostService {
     static async create(formData: FormData) {
