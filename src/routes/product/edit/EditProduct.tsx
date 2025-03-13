@@ -19,7 +19,7 @@ export const EditProduct = () => {
             setProduct(product.data);
             setEdit({ isPublished: product.data.isPublished, isCatalog: product.data.isCatalog });
         })
-    }, []);
+    }, [id]);
 
     const updateProduct = (field: keyof TProduct, value: any) => {
         setEdit(prevState => ({...prevState, [field]: value}));
@@ -125,7 +125,8 @@ export const EditProduct = () => {
                             <input type="file" onChange={handleFileSelected} />
                             <img 
                                 src={newFile ? URL.createObjectURL(newFile) : product?.image} 
-                                style={{ width: '450px' }}/>
+                                style={{ width: '450px' }}
+                                alt='#' />
                         </div>
                     </div>
                     <Panel.Button onClick={handleProductUpdate} text='Сохранить изменения' />

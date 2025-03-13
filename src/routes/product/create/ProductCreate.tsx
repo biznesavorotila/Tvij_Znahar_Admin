@@ -146,7 +146,7 @@ export const ProductCreate = () => {
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', width: '45%' }}>
                                 <input type='file' onChange={handleFileChange} />
-                                { file && <img src={URL.createObjectURL(file)} /> }
+                                { file && <img src={URL.createObjectURL(file)} alt='#' /> }
                             </div>
                         </div>
                         <Panel.Button text="Создать" type='submit' />

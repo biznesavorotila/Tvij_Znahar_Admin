@@ -60,7 +60,7 @@ export const CreatePost = () => {
                     <Panel.Form onSubmit={handlePostCreate}>
                         <p>Выберите изображение</p>
                         <input type="file" onChange={handleFileChange} />
-                        {file && <img src={URL.createObjectURL(file)} />}
+                        {file && <img src={URL.createObjectURL(file)} alt='#' />}
 
                         <Panel.FormInput 
                             title='Текст' 

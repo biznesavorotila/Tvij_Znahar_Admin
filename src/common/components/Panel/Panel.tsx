@@ -62,7 +62,7 @@ export const Notification = ({ style,  children, onRemove }: TPanelNotificationP
         <div className='panel-notification-container' style={style}>
             <h1 className='panel-notification-text'>{children}</h1>
             <button onClick={onRemove}>
-                <img width={10} height={10} src={Images.CrossIcon} />
+                <img width={10} height={10} src={Images.CrossIcon} alt='#' />
             </button>
         </div>
     );
