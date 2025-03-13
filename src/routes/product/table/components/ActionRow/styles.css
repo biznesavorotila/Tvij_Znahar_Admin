@@ -1,0 +1,19 @@
+.panel-table-action-row {
+    display: block;
+    flex-direction: row;
+    color: transparent;
+}
+
+.panel-table-action-row > * {
+    color: whitesmoke;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+.panel-table-action-row > *:not(:last-child)::after {
+    content: '|';
+    color: whitesmoke;
+    margin: 0 10px;
+}
