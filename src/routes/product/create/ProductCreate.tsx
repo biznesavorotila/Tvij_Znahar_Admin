@@ -132,7 +132,7 @@ export const ProductCreate = () => {
                                         />
                                 </div>
 
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 10, paddingTop: 15 }}>
                                     <label htmlFor="select">Выберите родительский продукт (опционально).</label>
                                     <select id="select" value={selectedOption} onChange={handleChange}>
                                         <option value="">Select...</option>
