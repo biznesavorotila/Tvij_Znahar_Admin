@@ -47,9 +47,16 @@ export const ProductCreate = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+
         const payload = new FormData(e.currentTarget);
         payload.append('isCatalog', String(product.isCatalog));
         payload.append('isPublished', String(product.isPublished));
+
+        if (Number(payload.get('price')) < 0) {
+            alert('Цена не может быть отрицательной');
+            return;
+        }
+
         if (file) {
             if (
                 !(file.name.includes('.jpg') 

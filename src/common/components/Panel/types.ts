@@ -37,6 +37,7 @@ export type TPanelFormInputProps = {
     style?: React.CSSProperties;
     name?: string;
     onTextChange?: (text: string) => void;
+    minValue?: number;
 }
 
 export type TPanelButtonProps = {
