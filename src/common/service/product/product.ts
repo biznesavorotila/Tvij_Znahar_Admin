@@ -6,10 +6,10 @@ const HOST = process.env.REACT_APP_HOST;
 export class ProductService {
     static async create(formData: FormData) {
         return await axios.post(`${HOST}/api/product/create`, formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-                'Access-Control-Allow-Origin': '*',
-            }
+            // headers: {
+            //     'Content-Type': 'multipart/form-data',
+            //     'Access-Control-Allow-Origin': '*',
+            // }
         })
     }
 
@@ -43,10 +43,10 @@ export class ProductService {
 
     static async update(id: number, formData: FormData) {
         return await axios.patch(`${HOST}/api/product/update/${id}`, formData, {  
-            headers: {
-                'Content-Type': 'multipart/form-data',
-                'Access-Control-Allow-Origin': '*',
-            }
+            // headers: {
+            //     'Content-Type': 'multipart/form-data',
+            //     'Access-Control-Allow-Origin': '*',
+            // }
         });
     }
 
