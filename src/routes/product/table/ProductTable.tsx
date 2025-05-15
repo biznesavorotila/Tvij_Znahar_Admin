@@ -63,6 +63,7 @@ export const ProductTable = () => {
         switch (action) {
             case 'delete':
                 const curProduct = products.find(p => p.id === productId);
+                
 
                 if (curProduct?.parent) {
                     if (!window.confirm(`Каталог ${curProduct.name} содержит дочерние продукты. вы уверены, что хотите удалить каталог ПОЛНОСТЬЮ?`)) {
